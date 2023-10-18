@@ -15,13 +15,23 @@ public class Voiture {
         super();
     }
 
-    public Voiture(int id, String marque, String type, Date date_ms, int numerotation, long prix) {
+    public Voiture(int id, String marque, String type, Date date_ms, int numerotation, long prix, Client client, Location location) {
         this.id = id;
         this.marque = marque;
         this.type = type;
         this.date_ms = date_ms;
         this.numerotation = numerotation;
         this.prix = prix;
+        this.client = client;
+        this.location = location;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public Location getLocation() {
+        return location;
     }
 
     public int getId() {
@@ -72,6 +82,14 @@ public class Voiture {
         this.prix = prix;
     }
 
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     @Override
     public String toString() {
         return "Voiture{" +
@@ -81,6 +99,8 @@ public class Voiture {
                 ", date_ms=" + date_ms +
                 ", numerotation=" + numerotation +
                 ", prix=" + prix +
+                ", client=" + client +
+                ", location=" + location +
                 '}';
     }
 }

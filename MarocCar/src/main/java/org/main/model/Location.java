@@ -11,17 +11,32 @@ public class Location {
     private boolean est_validée;
     private List<Voiture> voitures;
     private Client client;
+    private Commercial commercial;
 
     public Location() {
         super();
     }
 
-    public Location(long num, Date date_loc, Date lancement, boolean est_validée) {
+    public Location(long num, Date date_loc, Date lancement, boolean est_validée, List<Voiture> voitures, Client client, Commercial commercial) {
         this.num = num;
         this.date_loc = date_loc;
         this.lancement = lancement;
         this.est_validée = est_validée;
+        this.voitures = voitures;
+        this.client = client;
+        this.commercial = commercial;
+    }
 
+    public List<Voiture> getVoitures() {
+        return voitures;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public Commercial getCommercial() {
+        return commercial;
     }
 
     public long getNum() {
@@ -56,6 +71,18 @@ public class Location {
         this.est_validée = est_validée;
     }
 
+    public void setVoitures(List<Voiture> voitures) {
+        this.voitures = voitures;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void setCommercial(Commercial commercial) {
+        this.commercial = commercial;
+    }
+
     @Override
     public String toString() {
         return "Location{" +
@@ -63,6 +90,9 @@ public class Location {
                 ", date_loc=" + date_loc +
                 ", lancement=" + lancement +
                 ", est_validée=" + est_validée +
+                ", voitures=" + voitures +
+                ", client=" + client +
+                ", commercial=" + commercial +
                 '}';
     }
 }

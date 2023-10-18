@@ -1,6 +1,7 @@
 package org.main.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Commercial {
     private String cin;
@@ -11,12 +12,14 @@ public class Commercial {
     private Date date_naissance;
     private long salaire;
     private String password;
+    private List<Location> locations;
+    private List<Client> clients;
 
     public Commercial() {
         super();
     }
 
-    public Commercial(String cin, String nom, String prenom, String email, String tel, Date date_naissance, long salaire, String password) {
+    public Commercial(String cin, String nom, String prenom, String email, String tel, Date date_naissance, long salaire, String password, List<Location> locations, List<Client> clients) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
@@ -25,6 +28,16 @@ public class Commercial {
         this.date_naissance = date_naissance;
         this.salaire = salaire;
         this.password = password;
+        this.locations = locations;
+        this.clients = clients;
+    }
+
+    public List<Location> getLocations() {
+        return locations;
+    }
+
+    public List<Client> getClients() {
+        return clients;
     }
 
     public String getCin() {
@@ -91,6 +104,14 @@ public class Commercial {
         this.password = password;
     }
 
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
+    }
+
+    public void setClients(List<Client> clients) {
+        this.clients = clients;
+    }
+
     @Override
     public String toString() {
         return "Commercial{" +
@@ -102,6 +123,8 @@ public class Commercial {
                 ", date_naissance=" + date_naissance +
                 ", salaire=" + salaire +
                 ", password='" + password + '\'' +
+                ", locations=" + locations +
+                ", clients=" + clients +
                 '}';
     }
 }

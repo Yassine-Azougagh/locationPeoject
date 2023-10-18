@@ -15,13 +15,14 @@ public class Client {
     private int carte_bank;
     private String password;
      private List<Location> locations;
+     private Commercial commercial;
 
 
     public Client() {
         super();
     }
 
-    public Client(String cin, String nom, String prenom, String email, String tel, Date date_naissance, String permis, boolean est_validé, int carte_bank, String password) {
+    public Client(String cin, String nom, String prenom, String email, String tel, Date date_naissance, String permis, boolean est_validé, int carte_bank, String password, List<Location> locations, Commercial commercial) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
@@ -32,6 +33,16 @@ public class Client {
         this.est_validé = est_validé;
         this.carte_bank = carte_bank;
         this.password = password;
+        this.locations = locations;
+        this.commercial = commercial;
+    }
+
+    public List<Location> getLocations() {
+        return locations;
+    }
+
+    public Commercial getCommercial() {
+        return commercial;
     }
 
     public int getCarte_bank() {
@@ -115,6 +126,14 @@ public class Client {
         this.password = password;
     }
 
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
+    }
+
+    public void setCommercial(Commercial commercial) {
+        this.commercial = commercial;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
@@ -128,6 +147,8 @@ public class Client {
                 ", est_validé=" + est_validé +
                 ", carte_bank=" + carte_bank +
                 ", password='" + password + '\'' +
+                ", locations=" + locations +
+                ", commercial=" + commercial +
                 '}';
     }
 }
