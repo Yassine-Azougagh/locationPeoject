@@ -99,7 +99,6 @@ public class AuthDbOperations extends PostgreSQLConnection{
                 client.setCarteBank(resultSet.getInt("carteBank"));
                 client.setPassword(resultSet.getString("password"));
                 client.setEstValidé(resultSet.getBoolean("EstValidé"));
-                this.getClients().put(client.getCin(),client);
             }
             super.closeConnection();
             return client;
@@ -133,7 +132,6 @@ public class AuthDbOperations extends PostgreSQLConnection{
                 client.setCarteBank(resultSet.getInt("carteBank"));
                 client.setPassword(resultSet.getString("password"));
                 client.setEstValidé(resultSet.getBoolean("EstValidé"));
-                this.getClients().put(client.getCin(),client);
             }
             super.closeConnection();
             return client;
@@ -168,7 +166,6 @@ public class AuthDbOperations extends PostgreSQLConnection{
                 client.setCarteBank(resultSet.getInt("carteBank"));
                 client.setPassword(resultSet.getString("password"));
                 client.setEstValidé(resultSet.getBoolean("EstValidé"));
-                this.getClients().put(client.getCin(), client);
             }
             super.closeConnection();
             return client;
