@@ -9,10 +9,10 @@ public class Client {
     private String prenom;
     private String email;
     private String tel;
-    private Date date_naissance;
+    private Date dateNaissance;
     private String permis;
-    private boolean est_validé;
-    private int carte_bank;
+    private boolean estValidé;
+    private int carteBank;
     private String password;
      private List<Location> locations;
      private Commercial commercial;
@@ -22,16 +22,16 @@ public class Client {
         super();
     }
 
-    public Client(String cin, String nom, String prenom, String email, String tel, Date date_naissance, String permis, boolean est_validé, int carte_bank, String password, List<Location> locations, Commercial commercial) {
+    public Client(String cin, String nom, String prenom, String email, String tel, Date dateNaissance, String permis, boolean estValidé, int carteBank, String password, List<Location> locations, Commercial commercial) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.tel = tel;
-        this.date_naissance = date_naissance;
+        this.dateNaissance = dateNaissance;
         this.permis = permis;
-        this.est_validé = est_validé;
-        this.carte_bank = carte_bank;
+        this.estValidé = estValidé;
+        this.carteBank = carteBank;
         this.password = password;
         this.locations = locations;
         this.commercial = commercial;
@@ -43,14 +43,6 @@ public class Client {
 
     public Commercial getCommercial() {
         return commercial;
-    }
-
-    public int getCarte_bank() {
-        return carte_bank;
-    }
-
-    public void setCarte_bank(int carte_bank) {
-        this.carte_bank = carte_bank;
     }
 
     public String getCin() {
@@ -73,16 +65,8 @@ public class Client {
         return tel;
     }
 
-    public Date getDate_naissance() {
-        return date_naissance;
-    }
-
     public String getPermis() {
         return permis;
-    }
-
-    public boolean isEst_validé() {
-        return est_validé;
     }
 
     public void setCin(String cin) {
@@ -105,16 +89,8 @@ public class Client {
         this.tel = tel;
     }
 
-    public void setDate_naissance(Date date_naissance) {
-        this.date_naissance = date_naissance;
-    }
-
     public void setPermis(String permis) {
         this.permis = permis;
-    }
-
-    public void setEst_validé(boolean est_validé) {
-        this.est_validé = est_validé;
     }
 
     public String getPassword() {
@@ -134,6 +110,30 @@ public class Client {
         this.commercial = commercial;
     }
 
+    public Date getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public void setDateNaissance(Date dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
+
+    public boolean isEstValidé() {
+        return estValidé;
+    }
+
+    public void setEstValidé(boolean estValidé) {
+        this.estValidé = estValidé;
+    }
+
+    public int getCarteBank() {
+        return carteBank;
+    }
+
+    public void setCarteBank(int carteBank) {
+        this.carteBank = carteBank;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
@@ -142,10 +142,10 @@ public class Client {
                 ", prenom='" + prenom + '\'' +
                 ", email='" + email + '\'' +
                 ", tel='" + tel + '\'' +
-                ", date_naissance=" + date_naissance +
+                ", dateNaissance=" + dateNaissance +
                 ", permis='" + permis + '\'' +
-                ", est_validé=" + est_validé +
-                ", carte_bank=" + carte_bank +
+                ", estValidé=" + estValidé +
+                ", carteBank=" + carteBank +
                 ", password='" + password + '\'' +
                 ", locations=" + locations +
                 ", commercial=" + commercial +

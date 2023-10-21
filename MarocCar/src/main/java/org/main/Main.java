@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         AuthDbOperations authDbOperations = new AuthDbOperations();
         System.out.println("Opened database successfully");
-        authDbOperations.isClientValidé("L132019387");
+        System.out.println(authDbOperations.getToutClient());
+
     }
 }
